@@ -85,7 +85,7 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `LunchTime5252`, `sturdy-carnival`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `sturdy-carnival`, `project_description`
+Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `LunchTime5252`, `sturdy-carnival`, `twitter_handle`, `linkedin_username`, `switchitoffice`, `ryan`, `sturdy-carnival`, `project_description`
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -195,7 +195,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Ryan Buchanan - [@twitter_handle](https://twitter.com/twitter_handle) - ryan@switchitoffice.com
 
 Project Link: [https://github.com/LunchTime5252/sturdy-carnival](https://github.com/LunchTime5252/sturdy-carnival)
 
