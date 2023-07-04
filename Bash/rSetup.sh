@@ -9,11 +9,11 @@
 
 #--[[Update Upgrade]]--
 #sudo snap refresh && sudo apt update && sudo apt upgrade
-apps = (
-"unzip"
-"ripgrep"
-"nvim"
-"node"
+apps=(
+  "unzip"
+  "rg"
+  "nvim"
+  "node"
 )
 
 DownloadApp ()
@@ -25,11 +25,14 @@ DownloadApp ()
     sudo snap install $1 --classic --edge
 
   elif apt list --installed | grep "^$1$" >/dev/null; then
-    sudo apt install $1
+    sudo apt-get install $1
   fi
 }
 
-DownloadApp(${apps[@]})
+for app in ${apps[@]}
+do
+  DownloadApp $app
+done
 sudo snap refresh && sudo apt update && sudo apt upgrade
 #git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
 #nvim ~/.config/nvim/lua/custom/
