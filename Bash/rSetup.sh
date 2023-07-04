@@ -1,22 +1,38 @@
 #!/bin/bash
 
 #--[[Download]]--
-#- ripgrep     #sudo apt install ripgrep
-#- Node.js     #sudo snap install node --classic --edge
-#- neoVim      #sudo snap install nvim --classic --edge
-#- unzip       #sudo apt install unzip
-#- NvChad      git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
-#- gh          #sudo snap install gh
+#- ripgrep     
+#- Node.js     
+#- neoVim     
+#- unzip     
+#- NvChad   
 
 #--[[Update Upgrade]]--
 #sudo snap refresh && sudo apt update && sudo apt upgrade
+apps = (
+"unzip"
+"ripgrep"
+"nvim"
+"node"
+)
 
+DownloadApp ()
+{
+  if command -v "$1" >/dev/null 2>&1; then
+    echo "Already installed skipping $1"
 
-sudo snap install gh
-sudo apt install unzip
-sudo apt install ripgrep
-sudo snap install nvim --classic --edge
-sudo snap install node --classic --edge
+  elif snap list | grep "^$1$" >/dev/null; then
+    sudo snap install $1 --classic --edge
+
+  elif apt list --installed | grep "^$1$" >/dev/null; then
+    sudo apt install $1
+  fi
+}
+
+DownloadApp(${apps[@]})
 sudo snap refresh && sudo apt update && sudo apt upgrade
-git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
-nvim ~/.config/nvim/lua/custom/
+#git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
+#nvim ~/.config/nvim/lua/custom/
+
+
+
