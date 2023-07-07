@@ -59,6 +59,7 @@ Git ()
    git config --global credential.username $username
    git config --global credential.password $key
    git config --global credential.helper store
+   git config --global core.editor nvim
 }
 
 Chekcfile .hushlogin
