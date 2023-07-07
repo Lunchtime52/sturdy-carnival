@@ -23,7 +23,7 @@ DownloadApp ()
     return
   fi
 
-  if snap find "$1" >/dev/null; then
+  if snap find "$1" &>/dev/null; then
     sudo snap install $1 --classic --edge
     return
   fi
@@ -35,10 +35,10 @@ DownloadApp ()
 }
 Chekcfile ()
 {
-  if [[ ! -f "$HOME/$1" ]]; then
-    echo "Creating File $HOME/$1"
+  if [[ ! -f "~/$1" ]]; then
+    echo "Creating File ~/$1"
     if [[ $1 == ".bash_aliases" ]]; then
-      cp .bash_aliases ~/.bash_aliases
+      cp ~/sturdy-carnival/Bash/.bash_aliases ~/.bash_aliases
     else
       touch ~/$1
     fi    
