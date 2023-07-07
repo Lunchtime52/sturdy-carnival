@@ -21,10 +21,10 @@ DownloadApp ()
   if command -v "$1" >/dev/null 2>&1; then
     echo "Already installed $1 skipping"
 
-  elif snap list | grep "^$1$" >/dev/null; then
+  elif snap find "$1" >/dev/null; then
     sudo snap install $1 --classic --edge
 
-  elif apt list --installed | grep "^$1$" >/dev/null; then
+  elif apt-cache polcy "$1" >/dev/null; then
     sudo apt-get install $1
   fi
 }
