@@ -1,0 +1,7 @@
+[credential]
+  username = [username]
+  password = [Personal Key]
+	helper = store
+[user]
+  email = [email]
+  name = [name]

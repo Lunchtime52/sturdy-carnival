@@ -1,3 +1,5 @@
 alias Nconfig='cd ~/.config/nvim/lua/custom/'
 alias update='sudo apt update && sudo apt upgrade'
 alias code='code-insiders'
+alias setup='bash ~/sturdy-carnival/Bash/rSetup.sh'
+alias g='git add . && git commit'
