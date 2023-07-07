@@ -20,12 +20,17 @@ DownloadApp ()
 {
   if command -v "$1" >/dev/null 2>&1; then
     echo "Already installed $1 skipping"
+    return
+  fi
 
-  elif snap find "$1" >/dev/null; then
+  if snap find "$1" >/dev/null; then
     sudo snap install $1 --classic --edge
+    return
+  fi
 
-  elif apt-cache polcy "$1" >/dev/null; then
+  if apt-cache polcy "$1" >/dev/null; then
     sudo apt-get install $1 >/dev/null
+    return
   fi
 }
 Chekcfile ()
