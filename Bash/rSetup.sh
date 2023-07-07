@@ -46,6 +46,20 @@ Chekcfile ()
       echo "The file $HOME/$1 already exists."
   fi
 }
+Git ()
+{
+   echo "Please enter your GitHub Username."
+   read username
+   echo "Please enter your email to use with git."
+   read email
+   echo "Please enter your personal key."
+   read key
+   git config --global user.name $username
+   git config --global user.email $email
+   git config --global credential.username $username
+   git config --global credential.password $key
+   git config --global credential.helper store
+}
 
 Chekcfile .hushlogin
 Chekcfile .bash_aliases
@@ -56,6 +70,7 @@ done
 sudo snap refresh && sudo apt update && sudo apt upgrade
 #git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
 #nvim ~/.config/nvim/lua/custom/
+Git
 
 
 
