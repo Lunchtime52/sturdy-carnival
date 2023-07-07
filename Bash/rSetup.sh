@@ -25,7 +25,7 @@ DownloadApp ()
     sudo snap install $1 --classic --edge
 
   elif apt-cache polcy "$1" >/dev/null; then
-    sudo apt-get install $1
+    sudo apt-get install $1 >/dev/null
   fi
 }
 Chekcfile ()
