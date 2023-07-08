@@ -20,7 +20,7 @@ DownloadApp ()
 {
   if [ -z "$(which $1)" ]; then
 
-    if [[$1 == "rg" ]]; then
+    if [[ $1 == "rg" ]]; then
       $1="ripgrep"
     fi
 
