@@ -6,7 +6,7 @@
 #- neoVim     
 #- unzip     
 #- NvChad   
-
+git="git config --global"
 #--[[Update Upgrade]]--
 #sudo snap refresh && sudo apt update && sudo apt upgrade
 apps=(
@@ -56,12 +56,13 @@ Git ()
   read email
   echo "Please enter your personal key."
   read key
-  git config --global user.name $username
-  git config --global user.email $email
-  git config --global credential.username $username
-  git config --global credential.password $key
-  git config --global credential.helper store
-  git config --global core.editor nvim
+  
+  $git user.name $username
+  $git user.email $email
+  $git credential.username $username
+  $git credential.password $key
+  $git credential.helper store
+  $git core.editor nvim
 }
 
 Chekcfile ~/.hushlogin
